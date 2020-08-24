@@ -75,10 +75,11 @@ var inventory = [
   ]
 const createList = (availableItems) => {
   // Solution code here...
-  inventory.forEach((element,index) => {
+  availableItems.forEach((element,index) => {
       if (element[index]) {
           availableItems.push(element[index])          
       }
+      // my mistake that I wrote invntory.foreach instead of availableItems.foreach
       
   });
   return availableItems
@@ -100,7 +101,19 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let newArr =[];
+  let name ;
+  arr.forEach(element => {
+    name = element;
+    if(element%3===0) name = 'Fizz';
+    if(element%5===0) name = 'Buzz';
+    if(element%3===0 && element%5===0) name = 'Fizz Buzz';
+
+    newArr.push(name);
+  });
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
