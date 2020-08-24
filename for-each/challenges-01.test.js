@@ -66,23 +66,18 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. 
 If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
-var inventory = [
-    { name: 'apples', available: true },
-    { name: 'pears', available: true },
-    { name: 'oranges', available: false },
-    { name: 'bananas', available: true },
-    { name: 'blueberries', available: false }
-  ]
+
 const createList = (availableItems) => {
+  let availableArray = []
   // Solution code here...
-  availableItems.forEach((element,index) => {
-      if (element[index]) {
-          availableItems.push(element[index])          
+  availableItems.forEach((element) => {
+      if (element.available) {
+          availableArray.push(element.name)          
       }
       // my mistake that I wrote invntory.foreach instead of availableItems.foreach
       
   });
-  return availableItems
+  return availableArray
 };
 
 /* ------------------------------------------------------------------------------------------------
