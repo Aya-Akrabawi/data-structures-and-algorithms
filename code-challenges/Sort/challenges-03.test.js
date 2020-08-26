@@ -96,6 +96,7 @@ CHALLENGE 7 - Stretch Goal
 
 Write a function named sortNumbersByLength that takes in an array of numbers and sorts those numbers by their length.
 
+
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
