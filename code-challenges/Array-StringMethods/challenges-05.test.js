@@ -250,7 +250,13 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
-  
+  var array = str.split('')
+  array.forEach((element, index) => {
+    if (['a', 'e', 'i', 'o', 'u'].includes(element.toLowerCase())){
+      array.splice(index, 1);
+    }
+  });
+  return array.join('')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -263,8 +269,24 @@ For example, extractVowels('gregor') returns ['grgr', 'eo'].
 Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioou']
 ------------------------------------------------------------------------------------------------ */
 
-const extractVowels = (str) => {
-  // Solution code here...
+const extractVowels = (str, count) => {
+  var array = str.split('')
+  var left = count || '';
+    for (var i = 0; i < array.length; i++) {
+      console.log(str, count)
+      if (['a', 'e', 'i', 'o', 'u'].includes(array[i].toLowerCase())) {
+        left += array.splice(i, 1);
+        array.join('');
+        extractVowels(array, left);
+
+        if (!['a', 'e', 'i', 'o', 'u'].includes(array)){
+          console.log(array, ['a', 'e', 'i', 'o', 'u'].includes(array))
+          break;
+        }
+      }
+  }
+
+  return [array.join(''), left]
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -361,7 +383,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return the string without vowels', () => {
     expect(removeVowels('gregor')).toStrictEqual('grgr');
     expect(removeVowels('gregor').length).toStrictEqual(4);
