@@ -20,7 +20,7 @@ let $ = createSnippetWithJQuery(`
 const changeAllClassNames = () => {
   // Solution code here...
   
-  $('li').addClass('fruit')
+ return $('li').addClass('fruit')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +31,18 @@ Write a function named sortBackwards that takes in an array of numbers and retur
  highest to smallest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBackwards = (arr) => arr.sort((a, b) => b-a);
+const sortBackwards = (arr) => {
+  return arr.sort((a, b) => {
+          if (a < b){
+            return 1;
+          } else if (a > b){
+            return -1;
+          } else {
+            return 0;
+          }
+       });
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -43,7 +54,19 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => (arr.sort());
+
+const alphabetize = (arr) => {
+  // Solution code here...
+ return arr.sort((a, b) => {
+  if(a>b) {
+    return 1;
+  }
+    else {
+      return -1;
+    }
+  });
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -51,7 +74,20 @@ CHALLENGE 4
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = (arr) => (arr.sort((a,b) => a.length-b.length));
+
+const sortByLength = (arr) => {
+  // Solution code here...
+  return arr.sort((a, b) => {
+    if (a.length>b.length){
+      return 1;
+    } else {
+      return -1;
+    }
+
+  });
+  
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
