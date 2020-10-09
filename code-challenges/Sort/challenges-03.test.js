@@ -20,7 +20,7 @@ let $ = createSnippetWithJQuery(`
 const changeAllClassNames = () => {
   // Solution code here...
   
-  $('li').addClass('fruit')
+ return $('li').addClass('fruit')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,10 +32,15 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
-  arr.sort( (a, b) => {
-    return a<b;
-  });
+  return arr.sort((a, b) => {
+          if (a < b){
+            return 1;
+          } else if (a > b){
+            return -1;
+          } else {
+            return 0;
+          }
+       });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,6 +55,14 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
+ return arr.sort((a, b) => {
+  if(a>b) {
+    return 1;
+  }
+    else {
+      return -1;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,6 +73,15 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  return arr.sort((a, b) => {
+    if (a.length>b.length){
+      return 1;
+    } else {
+      return -1;
+    }
+
+  });
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
