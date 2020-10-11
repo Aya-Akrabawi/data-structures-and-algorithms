@@ -68,7 +68,7 @@ The final structure should resemble this:
   ├── package.json
   └── README.md
 ```
-### Table of content:
+### Table of content of 301 challenges:
 
 challenge name | it's name and link
 ------------ | -------------
@@ -85,3 +85,30 @@ Code Challenge: 10 | [Chaining methods](https://github.com/Aya-Akrabawi/data-str
 Code Challenge: 12 | [Two-dimensional arrays](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Two-dimArray)
 Code Challenge: 13 | [Includes, every, substring, charAt](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/IncludesEverySubstringCharAtt)
 Code Challenge: 14 | [Combination of all methods](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/all-methods)
+
+
+### Table of content of 401 challenges:
+
+challenge class number |  link
+------------ | -------------
+Code Challenge: Class 01 | [forEach](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/for-each)
+
+ Class 01 | [Reversing Arrays]()
+
+ Class 02 | [Shifting Array]()
+
+ Class 03 | [Binary Search]()
+
+ Class 04 | [Linked List]()
+
+ Class 05 | [Linked List Zipped]()
+
+ Class 06 | [Stacks and Queues]()
+
+ Class 07 | [Queue with Stacks]()
+
+ Class 08 | [Fifo Animal Shelter]()
+
+ Class 09 | [Brackets Balancing Algorithm]()
+
+ Class 10 | [Tree DS Methods]()
