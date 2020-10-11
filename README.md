@@ -41,7 +41,12 @@ The final structure should resemble this:
   │  └── challenge-01.test.js
   │  └── challenge-02.test.js
   │  └── ...
-  |
+  |├── challenges
+  │  └── challengeName
+  │       └── challengename.js
+  │  └── challengeName
+  │       └── challengename.js
+  │  └── ...
   ├── [language]
   │   └── [data-structure-name]
   │       └── challenges
@@ -63,3 +68,20 @@ The final structure should resemble this:
   ├── package.json
   └── README.md
 ```
+### Table of content:
+
+challenge name | it's name and link
+------------ | -------------
+Code Challenge: 01 | [forEach](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/for-each)
+Code Challenge: 02 | [Pass by value, pass by reference](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
+Code Challenge: 03 | [Sort](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Sort)
+Code Challenge: 04 | [Regular expressions, part 1](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Regular%20expressions%2C%20part%201)
+Code Challenge: 05 | [Split, join, slice, splice](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Array-StringMethods)
+Code Challenge: 06 | [Object.keys, Object.values, Object.entries](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/ObjectKeysValuesEntries)
+Code Challenge: 07 | [Map](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Map)
+Code Challenge: 08 | [Filter](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Filter)
+Code Challenge: 09 | [Reduce](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Reduce)
+Code Challenge: 10 | [Chaining methods](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Chaining)
+Code Challenge: 12 | [Two-dimensional arrays](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/Two-dimArray)
+Code Challenge: 13 | [Includes, every, substring, charAt](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/IncludesEverySubstringCharAtt)
+Code Challenge: 14 | [Combination of all methods](https://github.com/Aya-Akrabawi/data-structures-and-algorithms/tree/master/code-challenges/all-methods)
