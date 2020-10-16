@@ -1,0 +1,16 @@
+{
+  "name": "linkedList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linked-list.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "watch": "jest --verbose --coverage --watchAll"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
