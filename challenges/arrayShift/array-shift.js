@@ -25,3 +25,4 @@ function insertShiftArray (arr,val){
 // console.log(newArr)
 insertShiftArray(array1,value1)
 console.log(newArr)
+module.exports =insertShiftArray;
