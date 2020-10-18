@@ -22,7 +22,7 @@ class LinkedList {
   includes(value) {
     let currentNode = this.head;
     while (currentNode.next) {
-      if (currentNode.value === value || currentNode.next.value === value) {
+      if (currentNode.value === value) {
         return true;
       }
       currentNode = currentNode.next;
@@ -64,38 +64,48 @@ class LinkedList {
 
 
   insertBefore(value, newVal) {
-    const node = new Node(newVal);
+    const node = new Node(newVal); //node >> {99,null}
     if (!this.head) {
       this.head = node
       return this;
     }
-    let currentNode = this.head;
-    node.next = this.head.next
-    let prevNode = node
-    while (currentNode.next.value !==value) {
+    let currentNode = this.head; 
+    console.log('this.head',this.head) // value: 3,    next: Node { value: 4, next: Node { value: 5, next: null } }
+    while (currentNode.value !==value) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
       currentNode = currentNode.next;
     }
-      currentNode.next = prevNode;
-    return this;
+    // {2,{3,{4,{undifind}}}}
+    let exactNode = new Node(value); //{2,undifind}
+    exactNode.next = currentNode.next; // {3,{4,{undefind}}}}}
+    currentNode.value = node.value; // {1,99{3,{4,{undefind}}}}}}
+    // console.log('newNode in the after ', newNode);
+    currentNode.next = exactNode;
+
+    /*//currentNode  { value: 4, next: Node { value: 5, next: null } 
+    console.log('currentNode',currentNode);
+    node.next = currentNode.next // node =  {99,{ value: 4, next: Node { value: 5, next: null } }}
+    console.log('node',node);
+    console.log('currentNode',currentNode);
+    console.log('currentNode',currentNode);
+    currentNode.value = node.value
+    currentNode.next = currentNode*/
+      return this;
   }
 
   insertAfter(value, newVal){
-    const node = new Node(newVal);
+    const node = new Node(newVal); //node >> {99,null}
     if (!this.head) {
       this.head = node
       return this;
     }
-    let currentNode = this.head;
-    // node.value = this.head
-    node.next = this.head.next.next
-    let nextNode = node
-    while (currentNode.next.value !==value) {
-      currentNode.next = currentNode.next.next;
+    let currentNode = this.head; 
+    console.log('this.head',this.head) // value: 3,    next: Node { value: 4, next: Node { value: 5, next: null } }
+    while (currentNode.value !==value) {
+      currentNode = currentNode.next;
     }
-    currentNode.next = this.head.next
-      currentNode.next.next = nextNode;
+    node.next = currentNode.next // { value: 5, next: null }
+      currentNode.next = node;
     return this;
-    
   }
 
 }
@@ -109,9 +119,9 @@ ll.insert(5);
 // console.log('After includes', ll.includes(5));
 
 console.log('before insertBefore function: ', ll.toString());
-// console.log('insert 3 before 4', ll.insertBefore(5, 2));
+console.log('insert 99 before 4', ll.insertBefore(4, 99));
 
-console.log('insert 3 before 4', ll.insertAfter(4, 2));
-console.log('After includes', ll.toString());
+// console.log('insert  4', ll.insertAfter(4, 99));
+console.log('toString ', ll.toString());
 
 module.exports = LinkedList;
