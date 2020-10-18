@@ -54,5 +54,23 @@ describe('Linked List', () => {
 
     expect(list.toString()).toEqual( "{ helloo } -> { hii } -> { bye } -> NULL");
 });
+it('insertBefore(value, newVal) ', () => {
+  let list = new LinkedList();
+  list.insert('helloo');
+  list.insert('hii');
+  list.insert('bye');
+
+list.insertBefore('hii', 'konnichiwa')
+  expect(list.toString()).toEqual( "{ helloo } -> { konnichiwa } -> { hii } -> { bye } -> NULL");
+});
+it('insertAfter(value, newVal) ', () => {
+  let list = new LinkedList();
+  list.insert('helloo');
+  list.insert('hii');
+  list.insert('bye');
+
+list.insertAfter('hii', 'konnichiwa')
+  expect(list.toString()).toEqual( "{ helloo } -> { hii } -> { konnichiwa } -> { bye } -> NULL");
+});
 });
 
