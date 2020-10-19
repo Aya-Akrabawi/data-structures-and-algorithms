@@ -110,25 +110,36 @@ class LinkedList {
 
 
   kthFromEnd(k) {
-    let currentNode = this.head;
+    let currentNodeCounter = this.head;
+    let currentNode = this.head
     let counter=0;
+    let positionCounter = 0;
     let listArr = []
     
     if (!this.head) {
       this.head = node
       return this;
     }
-    while (currentNode.next) {
-      counter ++;
+    while (currentNodeCounter.next) {
       listArr.push(counter)
-      currentNode = currentNode.next;
+      counter ++;
+      currentNodeCounter = currentNodeCounter.next;
     }
-    while (currentNode.value !==k) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
+    listArr.push(counter)
+
+    listArr.reverse();
+    while (currentNode.value !== k) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
       currentNode = currentNode.next;
+      positionCounter ++;
     }
-console.log(counter);
-console.log(listArr);
-    return false;
+
+
+console.log('counter',counter);
+console.log('listArr',listArr);
+console.log('listArr[positionCounter]',listArr[positionCounter]);
+console.log('currentNode',currentNode);
+console.log("Position",positionCounter);
+    return listArr[positionCounter];
   }
  
 
@@ -142,6 +153,7 @@ ll.insert(3);
 ll.insert(4);
 ll.insert(5);
 ll.insert(6);
+console.log('ll.kthFromEnd(4)',ll.kthFromEnd(5));
 
 // console.log('After insert', ll);
 // console.log('After includes', ll.includes(5));
@@ -151,5 +163,4 @@ console.log('before insertBefore function: ', ll.toString());
 
 // console.log('insert  4', ll.insertAfter(4, 99));
 // console.log('toString ', ll.toString());
-ll.kthFromEnd(5)
 module.exports = LinkedList;

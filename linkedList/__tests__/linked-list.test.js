@@ -72,5 +72,16 @@ it('insertAfter(value, newVal) ', () => {
 list.insertAfter('hii', 'konnichiwa')
   expect(list.toString()).toEqual( "{ helloo } -> { hii } -> { konnichiwa } -> { bye } -> NULL");
 });
+
+it('kthFromEnd(k) ', () => {
+  let list = new LinkedList();
+  list.insert('helloo');
+  list.insert('hii');
+  list.insert('bye');
+
+  expect(list.kthFromEnd('helloo')).toEqual(2);
+  expect(list.kthFromEnd('hii')).toEqual(1);
+  expect(list.kthFromEnd('bye')).toEqual(0);
+});
 });
 
