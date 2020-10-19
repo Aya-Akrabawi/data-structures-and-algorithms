@@ -108,20 +108,48 @@ class LinkedList {
     return this;
   }
 
+
+  kthFromEnd(k) {
+    let currentNode = this.head;
+    let counter=0;
+    let listArr = []
+    
+    if (!this.head) {
+      this.head = node
+      return this;
+    }
+    while (currentNode.next) {
+      counter ++;
+      listArr.push(counter)
+      currentNode = currentNode.next;
+    }
+    while (currentNode.value !==k) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
+      currentNode = currentNode.next;
+    }
+console.log(counter);
+console.log(listArr);
+    return false;
+  }
+ 
+
 }
+
+
 const ll = new LinkedList();
 // console.log('this is my List:', ll);
 ll.insert(3);
 // console.log('After insert', ll);
 ll.insert(4);
 ll.insert(5);
+ll.insert(6);
+
 // console.log('After insert', ll);
 // console.log('After includes', ll.includes(5));
 
 console.log('before insertBefore function: ', ll.toString());
-console.log('insert 99 before 4', ll.insertBefore(4, 99));
+// console.log('insert 99 before 4', ll.insertBefore(4, 99));
 
 // console.log('insert  4', ll.insertAfter(4, 99));
-console.log('toString ', ll.toString());
-
+// console.log('toString ', ll.toString());
+ll.kthFromEnd(5)
 module.exports = LinkedList;
