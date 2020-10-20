@@ -134,14 +134,32 @@ class LinkedList {
     }
 
 
-console.log('counter',counter);
-console.log('listArr',listArr);
-console.log('listArr[positionCounter]',listArr[positionCounter]);
-console.log('currentNode',currentNode);
-console.log("Position",positionCounter);
+// console.log('counter',counter);
+// console.log('listArr',listArr);
+// console.log('listArr[positionCounter]',listArr[positionCounter]);
+// console.log('currentNode',currentNode);
+// console.log("Position",positionCounter);
     return listArr[positionCounter];
   }
- 
+   mergeLists(list1,list2) {
+    let first = list1.head;
+    let second = list2.head;
+    let ll = new LinkedList(new Node(first.value));
+    first = first.next;
+    let count = 0;
+    while(first || second) {
+      if(count%2 === 0 && second) {
+        ll.append(new Node(second.value))
+        second = second.next;
+      } 
+      if(count%2 === 1 && first) {
+        ll.append(new Node(first.value))
+        first = first.next;
+      }
+      count++;
+    }
+    return ll;
+  } 
 
 }
 
