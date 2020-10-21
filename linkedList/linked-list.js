@@ -6,6 +6,7 @@ class LinkedList {
     this.head = null;
   }
   insert(value) {
+    // this.head = new Node (value,this.head)
     const node = new Node(value);
     if (!this.head) {
       this.head = node
@@ -168,14 +169,14 @@ ll.insert(3);
 ll.insert(4);
 ll.insert(5);
 ll.insert(6);
-console.log('ll.kthFromEnd(4)',ll.kthFromEnd(3));
+// console.log('ll.kthFromEnd(4)',ll.kthFromEnd(3));
 
 // console.log('After insert', ll);
-// console.log('After includes', ll.includes(5));
+// console.log('After includes', ll.includes(50));
 
 console.log('before insertBefore function: ', ll.toString());
-// console.log('insert 99 before 4', ll.insertBefore(4, 99));
+// console.log('insert 99 before 4', ll.insertBefore(5, 99));
 
 // console.log('insert  4', ll.insertAfter(4, 99));
-// console.log('toString ', ll.toString());
+console.log('toString ', ll.toString());
 module.exports = LinkedList;

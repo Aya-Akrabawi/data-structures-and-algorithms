@@ -79,9 +79,9 @@ it('kthFromEnd(k) ', () => {
   list.insert('hii');
   list.insert('bye');
 
-  expect(list.kthFromEnd('helloo')).toEqual(2);
-  expect(list.kthFromEnd('hii')).toEqual(1);
-  expect(list.kthFromEnd('bye')).toEqual(0);
+  expect(list.kthFromEnd(2)).toEqual('helloo');
+  expect(list.kthFromEnd(1)).toEqual('hii');
+  expect(list.kthFromEnd(0)).toEqual('bye');
 });
 });
 
