@@ -114,32 +114,47 @@ class LinkedList {
     let currentNode = this.head
     let counter=0;
     let positionCounter = 0;
-    let listArr = []
+    let posArray = []
+    let valArray = []
+    let exactValue;
     
     if (!this.head) {
       this.head = node
       return this;
     }
     while (currentNodeCounter.next) {
-      listArr.push(counter)
+      posArray.push(counter)
+      valArray.push(currentNodeCounter.value)
       counter ++;
       currentNodeCounter = currentNodeCounter.next;
     }
-    listArr.push(counter)
+    posArray.push(counter)
+    valArray.push(currentNodeCounter.value)
 
-    listArr.reverse();
-    while (currentNode.value !== k) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
-      currentNode = currentNode.next;
-      positionCounter ++;
+    posArray.reverse();
+    valArray.reverse();
+
+    for (let i = 0; i < posArray.length; i++) {
+      valArray[i]
+      if (posArray[i] !== k) { //currentVode = { value: 4, next: Node { value: 5, next: null } }
+        currentNode = currentNode.next;
+      } else if (posArray[i] === k){
+        return exactValue = valArray[posArray[i]]
+      }
+            
     }
 
 
+
 console.log('counter',counter);
-console.log('listArr',listArr);
-console.log('listArr[positionCounter]',listArr[positionCounter]);
+console.log('posArray',posArray);
+
+console.log('valArray',valArray);
+console.log('posArray[positionCounter]',posArray[positionCounter]);
+console.log('valArray[positionCounter]',valArray[positionCounter]);
 console.log('currentNode',currentNode);
 console.log("Position",positionCounter);
-    return listArr[positionCounter];
+    return exactValue;
   }
  
 
@@ -153,7 +168,7 @@ ll.insert(3);
 ll.insert(4);
 ll.insert(5);
 ll.insert(6);
-console.log('ll.kthFromEnd(4)',ll.kthFromEnd(5));
+console.log('ll.kthFromEnd(4)',ll.kthFromEnd(3));
 
 // console.log('After insert', ll);
 // console.log('After includes', ll.includes(5));
