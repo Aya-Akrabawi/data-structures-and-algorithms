@@ -2,10 +2,11 @@
 a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 
 ## Challenge
-to create linked list and insert values inside it and check them 
+to create linked list and manipulate it
+
 
 ## Approach & Efficiency
-to create linked list and insert values inside it and check them 
+to create linked list and manipulate it
 
 ## API
  a method called insert >> takes any value as an argument and adds a new node with that value to the head of the list
