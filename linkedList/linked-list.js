@@ -141,27 +141,47 @@ class LinkedList {
 // console.log("Position",positionCounter);
     return listArr[positionCounter];
   }
-   mergeLists(list1,list2) {
-    let first = list1.head;
-    let second = list2.head;
-    let ll = new LinkedList(new Node(first.value));
-    first = first.next;
-    let count = 0;
-    while(first || second) {
-      if(count%2 === 0 && second) {
-        ll.append(new Node(second.value))
-        second = second.next;
-      } 
-      if(count%2 === 1 && first) {
-        ll.append(new Node(first.value))
-        first = first.next;
-      }
-      count++;
-    }
-    return ll;
-  } 
+  //  mergeLists(list1,list2) {
+  //   let first = list1.head;
+  //   let second = list2.head;
+  //   let ll = new LinkedList(new Node(first.value));
+  //   first = first.next;
+  //   let count = 0;
+  //   while(first || second) {
+  //     if(count%2 === 0 && second) {
+  //       ll.append(new Node(second.value))
+  //       second = second.next;
+  //     } 
+  //     if(count%2 === 1 && first) {
+  //       ll.append(new Node(first.value))
+  //       first = first.next;
+  //     }
+  //     count++;
+  //   }
+  //   return ll;
+  // } 
 
 }
+function mergeLists(list1,list2) {
+  let cur1 = list1.head;
+  let cur2 = list2.head;
+  let ll = new LinkedList(new Node(cur1.value));
+  cur1 = cur1.next;
+  let count = 0;
+  while(cur1 || cur2) {
+    if(count%2 === 0 && cur2) {
+      ll.append(new Node(cur2.value))
+      cur2 = cur2.next;
+    } 
+    if(count%2 === 1 && cur1) {
+      ll.append(new Node(cur1.value))
+      cur1 = cur1.next;
+    }
+    count++;
+  }
+  return ll;
+}
+
 
 
 const ll = new LinkedList();
@@ -181,4 +201,5 @@ console.log('before insertBefore function: ', ll.toString());
 
 // console.log('insert  4', ll.insertAfter(4, 99));
 // console.log('toString ', ll.toString());
+// console.log(mergeLists(list1,list2));
 module.exports = LinkedList;
