@@ -25,12 +25,31 @@ class Stacks {
       }
 }
 
+class Queue {
+    constructor() {
+      this.storage = [];
+    }
+    enqueue(item){
+      this.storage.push(item)
+    }
+    dequeue(){
+      return this.storage.shift()
+    }
+    peak(){
+    return this.storage[0];
+    }
+    }
+    
+    
+    
+    let stck = new Stacks();
 
-let stck = new Stacks();
-
-stck.push(2);
-stck.push(4);
-stck.push(8);
-
-
-console.log(stck)
+    stck.push(2);
+    stck.push(4);
+    stck.push(8);
+    
+    
+    console.log(stck)
+    
+module.exports = Queue;
+module.exports = Stacks;
