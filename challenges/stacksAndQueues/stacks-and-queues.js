@@ -17,6 +17,12 @@ class Stacks {
         this.storage.unshift(value);
         this.top = value;
     }
+
+    pop(){
+        const item = this.storage.shift();
+        this.top = this.storage[0] ? this.storage[0] : null;
+        return item;
+      }
 }
 
 
