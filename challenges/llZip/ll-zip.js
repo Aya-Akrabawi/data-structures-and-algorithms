@@ -21,7 +21,7 @@ function zipLists(list1, list2) {
         }
         count++;
     }
-    return ll;
+    return ll.toString();
 }
 
 const ll1 = new List();
