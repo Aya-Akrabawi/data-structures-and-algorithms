@@ -1,7 +1,6 @@
 'use strict';
 
 const Node = require('../node');
-const mergeLists = require('../linked-list');
 
 describe(`Node Class ${Node}`, () => {
   it('constructor()', () => {
@@ -83,43 +82,6 @@ it('kthFromEnd(k) ', () => {
   expect(list.kthFromEnd('helloo')).toEqual(2);
   expect(list.kthFromEnd('hii')).toEqual(1);
   expect(list.kthFromEnd('bye')).toEqual(0);
-});
-it('function works happily', ()=> {
-
-  let listA = new LinkedList();
-  listA.insert('1');
-  listA.insert('2');
-  listA.insert('3');
-  listA.insert('4');
-  listA.insert('5');
-
-  let listB = new LinkedList();
-  listB.insert('A');
-  listB.insert('B');
-  listB.insert('C');
-  listB.insert('D');
-  listB.insert('E');
-  function mergeLists(list1,list2) {
-    let cur1 = list1.head;
-    let cur2 = list2.head;
-    let ll = new LinkedList(new Node(cur1.value));
-    cur1 = cur1.next;
-    let count = 0;
-    while(cur1 || cur2) {
-      if(count%2 === 0 && cur2) {
-        ll.append(new Node(cur2.value))
-        cur2 = cur2.next;
-      } 
-      if(count%2 === 1 && cur1) {
-        ll.append(new Node(cur1.value))
-        cur1 = cur1.next;
-      }
-      count++;
-    }
-    return ll;
-  }
-  
-  expect(mergeLists(listA, listB)).toEqual('{ 1 } -> { A } -> { 2 } -> { B } -> { 3 } -> { C } -> { 4 } -> { D } -> { 5 } -> { E } ->  NULL');
 });
 });
 
