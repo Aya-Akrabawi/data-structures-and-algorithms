@@ -85,3 +85,24 @@ testTree.add(80)
   })
 })
 
+describe('Maximum Value class-16', ()=> {
+  it('Returns null for empty trees', ()=> {
+    let binaryTree = new BinaryTree();
+
+    expect(binaryTree.findMaximumValue()).toBeNull;
+  });
+
+  it('Can successfully find a maximum value', ()=> {
+
+    let tree = new BinaryTree();
+  tree.add(6);
+  tree.add(2);
+  tree.add(4);
+  tree.add(7);
+  tree.add(1);
+  tree.add(10);
+  tree.add(3);
+
+    expect(tree.findMaximumValue()).toEqual(10);
+  });
+});

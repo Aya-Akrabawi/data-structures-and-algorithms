@@ -16,3 +16,5 @@ big O : o(n)
 
 
 3- a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+
+4- method named find-maximum-value that return the maximum value stored in the tree.

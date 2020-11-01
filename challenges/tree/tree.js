@@ -94,6 +94,23 @@ class Node {
         return false;
       }
 
+      findMaximumValue(){
+        if(this.root === null)
+          return null;
+        let max = 0;
+        helperFunction(this.root);
+        function helperFunction (root){
+          if (root.value > max) 
+            max = root.value;
+          if(root.left !== null){
+            helperFunction(root.left);
+          }
+          if(root.right !== null){
+            helperFunction(root.right);
+          }
+        } 
+        return max;
+      } 
 
 
   }
@@ -104,11 +121,11 @@ class Node {
   tree.add(4);
   tree.add(7);
   tree.add(1);
-  tree.add(5);
+  tree.add(10);
   tree.add(3);
-  console.log('tree = ',tree);
-  console.log('tree.contains(10) = ',tree.contains(10));
-
+  // console.log('tree = ',tree);
+  // console.log('tree.contains(10) = ',tree.contains(10));
+  console.log('findMaximumValue',tree.findMaximumValue());
   module.exports = (Node , BinaryTree);
 
 
