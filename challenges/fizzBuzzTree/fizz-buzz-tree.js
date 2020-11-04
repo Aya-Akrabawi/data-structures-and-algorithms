@@ -1,5 +1,6 @@
 'use strict';
 
+
 function FizzBuzzTree(tree) {
 
   let buzzFizzFunc = (node) => {
