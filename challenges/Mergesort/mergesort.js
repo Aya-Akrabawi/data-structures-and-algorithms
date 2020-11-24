@@ -23,7 +23,8 @@ function mergesort(arr) {
 }
 
 function merge(left, right, arr1) {
-    let i = 0;
+    console.log('left', left,'right', right, 'arr',arr1);
+        let i = 0;
     let j = 0;
     let k = 0;
     while (i < left.length && j < right.length) {

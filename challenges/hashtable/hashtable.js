@@ -63,14 +63,15 @@ class Node {
       }
   }
   
-  const hashmap = new HashMap(4000);
-  hashmap.add('student','Aya');
-  hashmap.add('TA', 'Fatima');
-  hashmap.add('TA', 'Anolla');
-  hashmap.add('instructor', 'Mahmoud');
-  console.log(  hashmap.get('manager'));
-  console.log(  hashmap.get('student'));
-  console.log(  hashmap.contain('professor'));
+  module.exports = HashMap;
+  // const hashmap = new HashMap(4000);
+  // hashmap.add('student','Aya');
+  // hashmap.add('TA', 'Fatima');
+  // hashmap.add('TA', 'Anolla');
+  // hashmap.add('instructor', 'Mahmoud');
+  // console.log(  hashmap.get('manager'));
+  // console.log(  hashmap.get('student'));
+  // console.log(  hashmap.contain('professor'));
 
-  console.log(hashmap.storage);
+  // console.log(hashmap.storage);
 
