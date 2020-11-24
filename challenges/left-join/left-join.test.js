@@ -25,28 +25,28 @@ function testExample() {
 }
 
 describe('Left joins works as intended', ()=> {
-  it('Successfully does a full left join, and Data5 to only have 1 entry', ()=> {
+  it('make full left join, and Data5 to only have 1 entry', ()=> {
     let [myHashA, myHashB] = testExample();
     leftJoin(myHashA, myHashB);
     // console.log(util.inspect(myHashA.entries[myHashA.hash('Data5')], false, null, true /* enable colors */))
     expect(myHashA.entries[myHashA.hash('Data5')].size).toEqual(1);
   });
 
-  it('Successfully does a full left join, and Data5 to have a correct entry value', ()=> {
+  it('make full left join, and Data5 to have a correct entry value', ()=> {
     let [myHashA, myHashB] = testExample();
     leftJoin(myHashA, myHashB);
 
     expect(myHashA.entries[myHashA.hash('Data5')].head.value['Data5']).toEqual('whoseesdeadpeople');
   });
 
-  it('Successfully does a full left join, and appends what exists in B to A', ()=> {
+  it('make full left join, and appends what exists in B to A', ()=> {
     let [myHashA, myHashB] = testExample();
     leftJoin(myHashA, myHashB);
 
     expect(myHashA.entries[myHashA.hash('Data')].size).toEqual(2);
   });
 
-  it('Successfully does a full left join, leaves unique B outside of A', ()=> {
+  it('make full left join, leaves unique B outside of A', ()=> {
     let [myHashA, myHashB] = testExample();
     leftJoin(myHashA, myHashB);
     
